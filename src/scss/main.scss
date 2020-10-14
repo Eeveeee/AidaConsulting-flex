@@ -25,7 +25,7 @@
 // slider
 .main-slider {
   .slider__item {
-    @include wh(480px, 190px);
+    @include wh(480, 190);
     color: $text-clr-light;
     .slide-wrapper {
       @include flex();
@@ -41,7 +41,7 @@
       }
     }
     @media (max-width: 480px) {
-      @include wh(300px, 190px);
+      @include wh(300, 190);
     }
   }
 }
@@ -51,7 +51,7 @@
     .slider__control {
       cursor: pointer;
       content: "";
-      @include wh(49px, 49px);
+      @include wh(49, 49);
       border: 2px solid white;
       background: rgba(0, 0, 0, 0.2) url(../img/icons/btn-next.svg) center no-repeat;
       transition: 0.3s;

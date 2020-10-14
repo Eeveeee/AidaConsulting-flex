@@ -1,0 +1,62 @@
+.services {
+  padding: 70px 0;
+  @media (max-width: 1024px) {
+    padding: 0 0 20px 0;
+  }
+
+  &-header {
+    @media (max-width: 1024px) {
+      margin: 0 0 25px 0;
+    }
+
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  &-cards {
+    @include flex(space-between, normal);
+  }
+  &__card {
+    width: 305px;
+    @media (max-width: 1024px) {
+      width: 250px;
+    }
+
+    .card {
+      &-name {
+        font-size: 21px;
+        font-weight: 500;
+        margin-bottom: 25px;
+      }
+      &-img-wrapper {
+        margin-bottom: 21px;
+        @include wh(45, 43);
+      }
+      &-content {
+        line-height: 30px;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .services {
+    &-cards {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    &__card {
+      width: 200px;
+      text-align: center;
+      .card {
+        &-name,
+        &-content,
+        &-img-wrapper {
+          text-align: inherit;
+        }
+        &-img-wrapper {
+          width: auto;
+        }
+      }
+    }
+  }
+}

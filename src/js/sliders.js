@@ -11,11 +11,14 @@ var sliderMain = tns({
   fixedWidth: 300,
   arrowKeys: true,
   responsive: {
-    480: {
+    500: {
       items: 1,
       fixedWidth: 1170,
       mouseDrag: true,
       edgePadding: 10,
+    },
+    480: {
+      fixedWidth: 400,
     },
   },
 })

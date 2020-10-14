@@ -10,7 +10,7 @@
     @include flex(space-between, flex-end);
     img {
       margin-right: 5px;
-      @include wh(45px, 45px);
+      @include wh(45, 45);
     }
     .company-name {
       font-size: 18px;
@@ -77,8 +77,8 @@
       background: rgba($color: #000000, $alpha: 0.95);
       left: -4000px;
       top: 0;
-      position: absolute;
-      z-index: 4;
+      position: fixed;
+      z-index: 1000;
       flex-direction: column;
       width: 100vw;
       height: 100vh;
