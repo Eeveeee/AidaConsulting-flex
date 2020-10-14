@@ -1,0 +1,51 @@
+.button {
+  @include button();
+  &-burger {
+    position: relative;
+    background: rgba($color: $oth-clr-green, $alpha: 0.65);
+    z-index: 5;
+    @include wh(40px, 40px);
+    padding: 0;
+    display: none;
+    position: fixed;
+    border: 2px solid black;
+    border-radius: 50%;
+    span,
+    span::after,
+    span::before {
+      transition: 0.3s;
+      position: absolute;
+      display: block;
+      height: 2px;
+      width: 100%;
+      top: 50%;
+      margin-bottom: 2px;
+      left: 0;
+      background: black;
+    }
+    span::after,
+    span::before {
+      content: "";
+    }
+    span::before {
+      transform: translateY(-5px);
+    }
+    span::after {
+      transform: translateY(3px);
+    }
+    @media (max-width: 1000px) {
+      display: block;
+      &.active {
+        span {
+          transform: rotate(-135deg);
+        }
+        span::after {
+          transform: rotate(270deg);
+        }
+        span::before {
+          display: none;
+        }
+      }
+    }
+  }
+}
