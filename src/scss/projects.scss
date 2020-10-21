@@ -1,0 +1,56 @@
+.projects {
+  &-wrapper {
+    padding: 50px 0 100px 0;
+  }
+  &-header {
+    text-align: center;
+  }
+  .slider {
+    &__item {
+      &-wrapper {
+        height: 372px;
+        background: $oth-clr-blue;
+        &:hover {
+          background: $main-clr-orange;
+        }
+      }
+      cursor: pointer;
+      .project {
+        &-info {
+          color: $text-clr-light;
+          padding: 30px;
+        }
+        &-img {
+          &-wrapper {
+            position: relative;
+            &::after {
+              position: absolute;
+              @include wh(369px, 230px);
+              top: 0;
+              left: 0;
+              background: rgba(0, 0, 0, 0.5);
+              content: "";
+            }
+          }
+        }
+        &-date {
+          font-size: 12px;
+          font-weight: 400;
+          margin-bottom: 15px;
+        }
+        &-name {
+          font-size: 20px;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          max-width: 229px;
+        }
+      }
+    }
+  }
+  &-pages {
+    margin-top: 40px;
+    @include flex();
+  }
+}

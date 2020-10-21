@@ -10,7 +10,7 @@
     @include flex(space-between, flex-end);
     img {
       margin-right: 5px;
-      @include wh(45, 45);
+      @include wh(45px, 45px);
     }
     .company-name {
       font-size: 18px;

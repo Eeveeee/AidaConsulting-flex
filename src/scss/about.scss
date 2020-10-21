@@ -6,7 +6,7 @@
     }
     &:last-child {
       position: relative;
-      @include wh(370, 608);
+      @include wh(370px, 608px);
       .item-wrapper {
         z-index: 5;
         position: absolute;
