@@ -21,16 +21,10 @@
           padding: 30px;
         }
         &-img {
+          @include wh(100%, 230px);
+          max-width: 369px;
           &-wrapper {
-            position: relative;
-            &::after {
-              position: absolute;
-              @include wh(369px, 230px);
-              top: 0;
-              left: 0;
-              background: rgba(0, 0, 0, 0.5);
-              content: "";
-            }
+            text-align: center;
           }
         }
         &-date {
@@ -39,17 +33,19 @@
           margin-bottom: 15px;
         }
         &-name {
-          font-size: 20px;
-          display: -webkit-box;
-          -webkit-line-clamp: 2;
-          -webkit-box-orient: vertical;
-          overflow: hidden;
-          max-width: 229px;
+          @media (min-width: 1440px) {
+            display: -webkit-box;
+            font-size: 20px;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            max-width: 229px;
+          }
         }
       }
     }
   }
-  &-pages {
+  .tns-nav {
     margin-top: 40px;
     @include flex();
   }

@@ -1,27 +1,20 @@
 import { tns } from '../../node_modules/tiny-slider/src/tiny-slider'
+
+let currentWidth = document.documentElement.clientWidth
+
 var sliderMain = tns({
-  gutter: 0,
+  center: true,
   container: '.main-slider',
   center: true,
-  edgePadding: 0,
   nav: false,
   controlsPosition: 'bottom',
   controlsContainer: '.slider-controls',
-  gutter: 50,
-  fixedWidth: 250,
+  slideBy: 1,
   arrowKeys: true,
-  responsive: {
-    500: {
-      items: 1,
-      fixedWidth: 1170,
-      mouseDrag: true,
-      edgePadding: 10,
-    },
-    480: {
-      fixedWidth: 400,
-    },
-  },
+  items: 1,
+  autowidth: true,
 })
+
 var sliderFeedback = tns({
   gutter: 0,
   container: '.feedback-slider',
@@ -30,19 +23,9 @@ var sliderFeedback = tns({
   nav: false,
   controlsPosition: 'bottom',
   controlsContainer: '.feedback-slider-controls',
-  gutter: 400,
-  fixedWidth: 250,
+  autowidth: true,
   arrowKeys: true,
-  responsive: {
-    1000: {
-      items: 1,
-      fixedWidth: 750,
-      mouseDrag: true,
-    },
-    768: {
-      fixedWidth: 550,
-    },
-  },
+  mouseDrag: true,
 })
 
 var sliderProjects = tns({
@@ -52,22 +35,28 @@ var sliderProjects = tns({
   slideBy: 3,
   gutter: 0,
   edgePadding: 0,
-  nav: true,
   controls: false,
   gutter: 21,
-  fixedWidth: 250,
   arrowKeys: false,
-  items: 3,
-  rewind: true,
   autoplayButton: '.button-autoplay',
-  navContainer: '.projects-pages',
-  autoplayHoverPause: true,
+  // navContainer: '.projects-pages',
+  navPosition: 'bottom',
+  items: 3,
   responsive: {
-    1000: {
+    1440: {
+      items: 3,
+      autoplayHoverPause: true,
       fixedWidth: 369,
+      center: true,
     },
-    768: {
-      fixedWidth: 550,
+    700: {
+      items: 2,
+      autoplayHoverPause: false,
+      fixedWidth: false,
+      autowidth: true,
+    },
+    250: {
+      items: 1,
     },
   },
 })

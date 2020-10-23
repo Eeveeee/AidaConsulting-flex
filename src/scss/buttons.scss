@@ -9,24 +9,6 @@
       border: 2px solid darken($text-clr-light, 10%);
     }
   }
-  &-projects-page {
-    border-radius: 50%;
-    transition: 0.3s;
-    border: none;
-    outline: none;
-    @include wh(20px, 20px);
-    background: url(../img/icons/unactive__slide.svg) center no-repeat;
-    background-size: cover;
-    margin-right: 5px;
-    &.tns-nav-active {
-      transition: 0.3s;
-      background: url(../img/icons/active__slide.svg) center no-repeat;
-      background-size: cover;
-    }
-    &:last-child {
-      margin-right: 0;
-    }
-  }
   &-autoplay {
     display: none;
   }
@@ -77,6 +59,27 @@
           display: none;
         }
       }
+    }
+  }
+}
+
+.tns-nav {
+  button {
+    border-radius: 50%;
+    transition: 0.3s;
+    border: none;
+    outline: none;
+    @include wh(20px, 20px);
+    background: url(../img/icons/unactive__slide.svg) center no-repeat;
+    background-size: cover;
+    margin-right: 5px;
+    &.tns-nav-active {
+      transition: 0.3s;
+      background: url(../img/icons/active__slide.svg) center no-repeat;
+      background-size: cover;
+    }
+    &:last-child {
+      margin-right: 0;
     }
   }
 }

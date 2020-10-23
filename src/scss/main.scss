@@ -25,7 +25,6 @@
 // slider
 .main-slider {
   .slider__item {
-    @include wh(480px, 190px);
     color: $text-clr-light;
     .slide-wrapper {
       @include flex();
@@ -39,9 +38,6 @@
           text-align: center;
         }
       }
-    }
-    @media (max-width: 480px) {
-      @include wh(300px, 190px);
     }
   }
 }

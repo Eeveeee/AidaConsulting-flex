@@ -1,5 +1,6 @@
 .services {
   padding: 70px 0;
+  background-color: #ebf1f6;
   @media (max-width: 1024px) {
     padding: 0 0 20px 0;
   }
@@ -16,6 +17,9 @@
     @include flex(space-between, normal);
   }
   &__card {
+    border: 2px solid #d0dae2;
+    border-radius: 5px;
+    padding: 10px;
     width: 305px;
     @media (max-width: 1024px) {
       width: 250px;
@@ -38,15 +42,22 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 850px) {
   .services {
     &-cards {
       flex-wrap: wrap;
       justify-content: center;
+      justify-content: space-between;
+      @media (max-width: 700px) {
+        justify-content: center;
+      }
     }
     &__card {
       width: 200px;
       text-align: center;
+      @media (max-width: 700px) {
+        margin-bottom: 10px;
+      }
       .card {
         &-name,
         &-content,
