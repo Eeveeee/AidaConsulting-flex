@@ -72,13 +72,7 @@
           top: 30%;
           .feedback-arrow-next,
           .feedback-arrow-prev {
-            svg {
-              g {
-                path {
-                  fill: red;
-                }
-              }
-            }
+            user-select: none;
           }
         }
         .slider__control.prev {
