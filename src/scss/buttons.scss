@@ -65,18 +65,31 @@
 
 .tns-nav {
   button {
+    position: relative;
     border-radius: 50%;
     transition: 0.3s;
-    border: none;
+    border: 3px solid $oth-clr-green;
     outline: none;
     @include wh(20px, 20px);
-    background: url(../img/icons/unactive__slide.svg) center no-repeat;
     background-size: cover;
     margin-right: 5px;
+    background: transparent;
     &.tns-nav-active {
       transition: 0.3s;
-      background: url(../img/icons/active__slide.svg) center no-repeat;
-      background-size: cover;
+      border-color: $main-clr-orange;
+      &::before {
+        background: transparent;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        content: "";
+        display: block;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: $main-clr-orange;
+      }
     }
     &:last-child {
       margin-right: 0;

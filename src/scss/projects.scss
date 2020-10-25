@@ -10,8 +10,13 @@
       &-wrapper {
         height: 372px;
         background: $oth-clr-blue;
-        &:hover {
-          background: $main-clr-orange;
+        @media (min-width: 1000px) {
+          &:hover {
+            background: $main-clr-orange;
+          }
+        }
+        @media (max-width: 1000px) {
+          padding-top: 10px;
         }
       }
       cursor: pointer;

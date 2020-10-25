@@ -17,14 +17,19 @@
     @include flex(space-between, normal);
   }
   &__card {
-    border: 2px solid #d0dae2;
-    border-radius: 5px;
-    padding: 10px;
     width: 305px;
+    padding: 10px;
+    @include flex(start);
+    flex-direction: column;
+    @media (min-width: 700px) {
+      border-right: 2px solid #d0dae2;
+    }
     @media (max-width: 1024px) {
       width: 250px;
     }
-
+    &:last-child {
+      border-right: 2px solid transparent;
+    }
     .card {
       &-name {
         font-size: 21px;
@@ -53,10 +58,9 @@
       }
     }
     &__card {
-      width: 200px;
-      text-align: center;
-      @media (max-width: 700px) {
-        margin-bottom: 10px;
+      width: 220px;
+      @media (max-width: 640px) {
+        margin-bottom: 15px;
       }
       .card {
         &-name,

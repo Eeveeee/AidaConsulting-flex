@@ -19,10 +19,12 @@
       &:last-child {
         margin-right: 0;
       }
-      &:hover {
-        transition: 0.2s;
-        color: $text-clr-light !important;
-        border-bottom: 2px solid $text-clr-light;
+      @media (min-width: 1000px) {
+        &:hover {
+          transition: 0.2s;
+          color: $text-clr-light !important;
+          border-bottom: 2px solid $text-clr-light;
+        }
       }
     }
   }
