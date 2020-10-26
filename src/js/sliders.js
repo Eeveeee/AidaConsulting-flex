@@ -39,7 +39,6 @@ var sliderProjects = tns({
   gutter: 21,
   arrowKeys: false,
   autoplayButton: '.button-autoplay',
-  // navContainer: '.projects-pages',
   navPosition: 'bottom',
   items: 3,
   responsive: {

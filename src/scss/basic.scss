@@ -5,9 +5,6 @@ body {
   justify-content: space-between;
   font-family: $font;
   font-weight: 400;
-  &.locked {
-    overflow-y: hidden;
-  }
 }
 img {
   max-width: 100%;

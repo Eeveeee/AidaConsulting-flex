@@ -73,6 +73,11 @@
           .feedback-arrow-next,
           .feedback-arrow-prev {
             user-select: none;
+            @media (min-width: 1000px) {
+              &:hover {
+                fill: $main-clr-orange;
+              }
+            }
           }
         }
         .slider__control.prev {
