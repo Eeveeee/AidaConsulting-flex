@@ -51,8 +51,8 @@
     }
   }
   .tns-nav {
-    min-height: 21px;
+    height: 21px !important;
     margin-top: 40px;
-    @include flex();
+    text-align: center;
   }
 }

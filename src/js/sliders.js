@@ -29,6 +29,7 @@ var sliderFeedback = tns({
 })
 
 var sliderProjects = tns({
+  lazyload: true,
   container: '.projects-slider',
   autoplay: true,
   speed: 600,
