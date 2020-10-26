@@ -64,7 +64,12 @@
 }
 
 .tns-nav {
+  box-sizing: border-box;
+  padding: 0 !important;
+
   button {
+    box-sizing: border-box;
+    padding: 0 !important;
     position: relative;
     border-radius: 50% !important;
     transition: 0.3s;
