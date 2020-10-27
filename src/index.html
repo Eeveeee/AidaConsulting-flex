@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UT8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AidaConsulting</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
@@ -92,20 +92,49 @@
             </div>
             <div class="about__item">
               <div class="item-wrapper">
-                <div>Заказать звонок</div>
+                <h3>Заказать звонок</h3>
                 <form action="" class="about-form">
-                  <input type="text" placeholder="Имя*" />
-                  <input type="email" placeholder="Почта*" />
-                  <input type="phone" placeholder="Телефон*" />
-                  <input type="text" placeholder="Услуга*" />
+                  <input
+                    name="name"
+                    type="text"
+                    class="f-name"
+                    placeholder="Имя*"
+                  />
+                  <input
+                    name="mail"
+                    type="email"
+                    class="f-mail"
+                    placeholder="Почта*"
+                  />
+                  <input
+                    name="phone"
+                    maxlength="11"
+                    type="phone"
+                    placeholder="Телефон*"
+                    class="f-phone"
+                  />
+                  <input
+                    name="service"
+                    maxlength="30"
+                    type="text"
+                    placeholder="Услуга*"
+                    class="f-service"
+                  />
                   <textarea
-                    name=""
-                    id=""
+                    name="question"
+                    maxlength="500"
+                    class="f-question"
                     cols="30"
                     rows="10"
                     placeholder="Вопрос*"
                   ></textarea>
-                  <button class="button button-submit">ОТПРАВИТЬ ЗАЯВКУ</button>
+                  <span class="message"></span>
+                  <button class="button button-submit">
+                    <span class="button-submit-text">ОТПРАВИТЬ ЗАЯВКУ</span>
+                    <div class="loading">
+                      <div class="loading-circle"></div>
+                    </div>
+                  </button>
                 </form>
               </div>
             </div>
